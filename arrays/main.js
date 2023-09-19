@@ -30,3 +30,12 @@ MoveInStart('Задача 4');
 console.log(tasks);
 
 console.log(tasks[-1]);
+
+const test = '123456asd';
+if (test.includes('as')) {
+    console.log('содержит')
+}
+
+let arr = ['1', '2', '3', '4', '5'];
+const arr1 = arr.slice(1);
+console.log(arr1);
