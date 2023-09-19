@@ -23,6 +23,7 @@ const arr = ['Vasya', 'Sveta', 'Катя', 'Oleg', 'Alex'];
 // с одним аргументом отрезает от начального индекса до конца массива не включая
 // с двумя аргументами - от и до
 // отрицательный индекс отрезает с конца 
+// возвращает отрезанный кусок
 
 const a = arr.slice(0, 1);
 console.log(arr);
@@ -41,5 +42,22 @@ console.log(b);
 
 // reverse - разворачивает массив.
 // concat - объединяет массивы
+
+
+// Деструктуризация
+// 
+const userData = ['Anton', 15, 'Moscow'];
+console.log(userData);
+
+let [userName, age, city] = userData;
+age = 19;
+console.log(userName, age, city);
+console.log(userData);
+
+// REST оператор 
+// деструктуризация
+const data = [1, 2, 3, 4, 5, 6];
+const [one, two, ...three] = data;
+console.log(one, two, three);
 
 
