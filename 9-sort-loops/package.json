@@ -1,0 +1,17 @@
+{
+  "name": "9-sort-loops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/script.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node js/script.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
