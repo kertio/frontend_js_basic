@@ -14,10 +14,7 @@ function sort(arr) {
         
         for( let i = 0; i < count; i++ ) {
             if (arr[i] > arr[i + 1]) {
-                const tmp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = tmp;
-
+                [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
                 sorted = true;
             }
         }
