@@ -10,7 +10,7 @@ const db = {
     field: 'Admin'
 }
 
-function queryGneerateStr(queryStr) {
+function queryGenerateStr(queryStr) {
     const length = Object.keys(queryStr).length;
 
     return Object.keys(queryStr).reduce((acc, item, index) => {
@@ -22,7 +22,7 @@ function queryGneerateStr(queryStr) {
     }, '?');
 }
 
-function queryGneerateStr2(queryStr) {
+function queryGenerateStr2(queryStr) {
     return Object.keys(queryStr)
         .reduce((acc, item) => {
             return acc += `${item}=${queryStr[item]}&`;
@@ -30,18 +30,18 @@ function queryGneerateStr2(queryStr) {
         .slice(0, -1);
 }
 
-function queryGneerateStr3(queryStr) {
+function queryGenerateStr3(queryStr) {
     return Object.entries(queryStr).map((item) => {
         return(`${item[0]}=${item[1]}`);
     }).join('&');
 }
 
-console.log(queryGneerateStr(queryObj));
-console.log(queryGneerateStr(db));
+console.log(queryGenerateStr(queryObj));
+console.log(queryGenerateStr(db));
 
-console.log(queryGneerateStr2(queryObj));
-console.log(queryGneerateStr2(db));
+console.log(queryGenerateStr3(queryObj));
+console.log(queryGenerateStr2(db));
 
-console.log(queryGneerateStr3(queryObj));
-console.log(queryGneerateStr3(db));
+console.log(queryGenerateStr3(queryObj));
+console.log(queryGenerateStr3(db));
 
