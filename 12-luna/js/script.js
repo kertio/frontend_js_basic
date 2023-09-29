@@ -15,7 +15,7 @@ function checkCard(cardNumber) {
         return Number(acc) + Number(num);
     }, 0);
     
-    return sum % 10 ? false : true;
+    return !(sum % 10);
 }
 
 console.log(checkCard(cardNumber));

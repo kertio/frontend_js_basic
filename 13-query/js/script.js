@@ -30,9 +30,18 @@ function queryGneerateStr2(queryStr) {
         .slice(0, -1);
 }
 
+function queryGneerateStr3(queryStr) {
+    return Object.entries(queryStr).map((item) => {
+        return(`${item[0]}=${item[1]}`);
+    }).join('&');
+}
 
 console.log(queryGneerateStr(queryObj));
 console.log(queryGneerateStr(db));
 
 console.log(queryGneerateStr2(queryObj));
 console.log(queryGneerateStr2(db));
+
+console.log(queryGneerateStr3(queryObj));
+console.log(queryGneerateStr3(db));
+
