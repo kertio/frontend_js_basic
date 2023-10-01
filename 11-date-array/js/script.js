@@ -27,13 +27,22 @@ function valiDate(date) {
 
 function parseData(arr) {
 	return arr
-		.map(data => data.replace(/[.\/-]/g, '-'))
+		.map(date => {
+			if (date.includes('/')) {
+				const [m, d, y] = date.split('/');
+			
+				return [d, m, y].join('-');
+			}
+
+			return date;
+		})
+		// .map(data => data.replace(/\//g, '-'))
 		.map(el => valiDate(el) || NOT_DATE)															
 		.filter(el => el != NOT_DATE)		// Удалить из массива все элементы NOT_DATE.
 }
 
-const data = ['28-02-2023', '29-02-2023', 'тест',
-	'11.12.2023', '00-13/2022', '29-02-2024', '31-04-2023',
+const data = ['2/14/2023', '28-02-2023', '29-02-2023', 'тест',
+	'11.12.2023', '00-13/2022', '29-02-2024', '01/31/2000', '31-04-2023',
 	'31-14-2023', '00/13/2022', 'test123', '1.9.2023'];
 
 console.log(parseData(data));
