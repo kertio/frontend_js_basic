@@ -59,7 +59,7 @@ const ToDoList = {
 }
 
 const taskList = ToDoList;
-const tl1 = ToDoList;
+
 taskList.addTask({title: 'Помыть посуду', priority: 2});
 taskList.addTask({title: 'Сделать домашнюю работу', priority: 8});
 taskList.addTask({title: 'Сделать влажную уборку', priority: 4});
@@ -83,5 +83,3 @@ taskList.updateTask(2, {priority: 5});
 taskList.updateTask(2, {title: 'Заменить в пульте батарейки'});
 taskList.updateTask(5, {title: 'Изучить JS + HTML + CSS', priority: 1});
 taskList.print();
-
-console.log(taskList);
