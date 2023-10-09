@@ -52,6 +52,8 @@ const ToDoList = {
 
     print() {
         console.log(`В вашем списке задач: ${this.taskList.length}`)
+        console.log(Object.entries(taskList));
+
         this.taskList.forEach(el => 
             console.log(`id: ${el.id}, task: ${el.title}, priority: ${el.priority}`));
         console.log('\n')
