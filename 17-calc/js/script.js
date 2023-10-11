@@ -2,27 +2,28 @@ const val1 = document.querySelector('.val1');
 const val2 = document.querySelector('.val2');
 const result = document.querySelector('.result');
 
-function clearInputs(input1, input2) {
-	input1.value = '';
-	input2.value = '';
-}
+document.querySelector(".operations").addEventListener('click', (event) => {
+	switch (event.target.classList[1]) {
+		case 'operations__plus':
+			result.innerHTML = +val1.value + +val2.value;
+			break;
+		
+		case 'operations__minus':
+			result.innerHTML = val1.value - val2.value;
+			break;
+		
+		case 'operations__div':
+			result.innerHTML = val1.value / val2.value;
+			break;
+		
+		case 'operations__mul':
+			result.innerHTML = val1.value * val2.value;
+			break;
+		
+		default:
+			break;
+	}
 
-function calc_plus() {
-	result.innerText = Number(val1.value) + Number(val2.value);
-	clearInputs(val1, val2);
-}
+	val1.value = val2.value = '';
+});
 
-function calc_minus() {
-	result.innerText = Number(val1.value) - Number(val2.value);
-	clearInputs(val1, val2);
-}
-
-function calc_div() {
-	result.innerText = Number(val1.value) / Number(val2.value);
-	clearInputs(val1, val2);
-}
-
-function calc_mul() {
-	result.innerText = Number(val1.value) * Number(val2.value);
-	clearInputs(val1, val2);
-}

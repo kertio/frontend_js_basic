@@ -73,6 +73,7 @@ body {
 	font-size: 14px;
 	color: #74778e;
 	background-color: #1f1f21;
+	max-width: 49%;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
