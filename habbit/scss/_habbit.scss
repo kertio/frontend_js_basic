@@ -1,0 +1,94 @@
+.habbit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    &__day {
+        padding: 20px 40px;
+        background-color: #FBFAFF;
+        // background-color: #8675ca;
+        border-radius: 10px 0 0 10px;
+        border-right: 1px solid #E7EBFB;
+    }
+
+    &__comment {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 40px;
+        width: 100%;
+        background-color: #FBFAFF;
+        // background-color: #8675ca;
+        border-radius: 0 10px 10px 0;
+
+        input {
+            background-color: transparent;
+            outline: none;
+            // color: #000;
+            border: none;
+
+            ::placeholder {
+                // color: #000;
+                // background-color: #000;
+            }
+        }
+
+
+    }
+
+    &__delete {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        right: 34px;
+        cursor: pointer;
+    }
+
+    &__add-comment {
+        position: absolute;
+        right: 30px;
+        background-color: transparent;
+        color: #5051F9;
+        padding: 10px;
+        font-size: 13px;
+        font-weight: 500;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all ease 0.3s;
+
+    }
+    &__add-comment:hover {
+        background-color: #8686ef;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 40px;
+        width: 100%;
+        background-color: #FBFAFF;
+        // background-color: #8675ca;
+        border-radius: 0 10px 10px 0;
+
+        input {
+            background-color: transparent;
+            outline: none;
+            // color: #000;
+            border: none;
+
+            ::placeholder {
+                // color: #000;
+                // background-color: #000;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+
+    &__btn {
+        width: 46px;
+        height: 46px;
+        border: none;
+        border-radius: 14px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+
+        &_active {
+            background-color: #5051F9;
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        &:hover {
+            background-color: #5051F9;
+            transition: all ease 0.4s;
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}

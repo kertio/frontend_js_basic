@@ -1,0 +1,40 @@
+.progress {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        min-width: 235px;
+    }
+    
+    &__name {
+        color: #232360;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__percent {
+        color: #768396;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    &__bar {
+        position: relative;
+        height: 5px;
+        width: 100%;
+        border-radius: 4px;
+        background: #E6E9ED;
+    }
+
+     &__cover-bar {
+        position: absolute;
+        height: 5px;
+        width: 80%;
+        border-radius: 4px;
+        background: #5051F9;
+     }
+    
+}

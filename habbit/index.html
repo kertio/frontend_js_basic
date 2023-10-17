@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habbit app | Треккер привычек</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+  <div class="app">
+    <div class="panel">
+        <a class="logo">
+            <img src="./icons/logo.svg" alt="" class="logo">
+        </a>
+
+        <nav class="nav">
+            <button class="nav__btn nav__btn_active">
+                <img src="./icons/dumbbell.svg" alt="Гантеля">
+            </button>
+            <button class="nav__btn">
+                <img src="./icons/water.svg" alt="Вода">
+            </button>
+            <button class="nav__btn">
+                <img src="./icons/eat.svg" alt="Еда">
+            </button>
+        </nav>
+
+        <button class="btn-add">
+            <img src="./icons/add.svg" alt="Добавить" class="btn-add__ico">
+        </button>
+    </div>
+
+    <div class="content">
+      <header>
+        <h1>Отжимания</h1>
+        <div class="progress">
+          <div class="progress__text">
+            <div class="progress__name">Прогресс</div>
+            <div class="progress__percent">80%</div>
+          </div>
+
+          <div class="progress__bar">
+            <div class="progress__cover-bar"></div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="habbit__wrapper">
+          <div class="habbit">
+            <div class="habbit__day">День 1</div>
+            <div class="habbit__comment">Комментарий</div>
+            <button class="habbit__delete">
+              <img src="./icons/delete.svg" alt="Удалить">
+            </button>
+          </div>
+
+          <div class="habbit">
+            <div class="habbit__day">День 2</div>
+            <form class="habbit__form">
+              <img src="./icons/comment.svg" alt="Комментарий">
+              <input type="text" placeholder="Комментарий" />
+              <button class="habbit__add-comment">Готово</button>
+            </form>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+</html>
