@@ -16,7 +16,24 @@ function saveData(){
 }
 
 
+/* Render */
+function renderMenu(activeMenuId) {
+    if (!activeMenuId) {
+        return;
+    }
+
+    
+
+}
+
+function renderPage(activeHabbitId) {
+    const activeHabbit = habbits.find(habbit => habbit.id === activeHabbitId);
+    
+    renderMenu(activeHabbit.id);
+}
+
 /* Run App single */
 (() => {
     loadData();
+    renderPage(habbits[0].id);
 })();
