@@ -5,7 +5,12 @@ let habbits = [];
 
 /* Page*/
 const page = {
-    menu: document.querySelector('.nav')
+    menu: document.querySelector('.nav'),
+    header: {
+        h1: document.querySelector('.h1'),
+        persent: document.querySelector('.progress__percent'),
+        progress: document.querySelector('.progress__cover-bar')
+    }
 }
 
 
@@ -54,8 +59,17 @@ function renderMenu(activeHabbit) {
     }
 }
 
-function renderHeader(activHabbit) {
+function renderHeader(activeHabbit) {
+    if (!activeHabbit) {
+        return;
+    }
 
+    page.header.h1.innerHTML = activeHabbit.name;
+    const progress = activeHabbit.days.length / activeHabbit.target > 1
+        ? 100
+        : activeHabbit.days.length / activeHabbit.target * 100;
+    page.header.persent.innerHTML = `${progress}%`;
+    page.header.progress.setAttribute('style', `width: ${progress}%`);
 }
 
 function renderPage(activeHabbitId) {
